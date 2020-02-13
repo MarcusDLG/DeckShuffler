@@ -122,6 +122,7 @@ namespace DeckShuffler
             deck.Remove(cardPlayed);
             if (deck.Count <= 1)
             {
+              Console.WriteLine("Sorry, out of cards!");
               flag = false;
             }
           }
