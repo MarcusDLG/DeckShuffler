@@ -107,7 +107,11 @@ namespace DeckShuffler
           Console.WriteLine("(Quit) the program");
           var input = Console.ReadLine().ToLower();
           // Verify user input
-
+          if (input != "nexdt" && input != "quit")
+          {
+            Console.WriteLine("That is not a valid choice, chose again from next or quit.");
+            input = Console.ReadLine().ToLower();
+          }
 
 
           if (input == "next")
