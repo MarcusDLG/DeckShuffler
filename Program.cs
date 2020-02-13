@@ -107,7 +107,7 @@ namespace DeckShuffler
           Console.WriteLine("(Quit) the program");
           var input = Console.ReadLine().ToLower();
           // Verify user input
-          if (input != "nexdt" && input != "quit")
+          if (input != "next" && input != "quit")
           {
             Console.WriteLine("That is not a valid choice, chose again from next or quit.");
             input = Console.ReadLine().ToLower();
@@ -120,6 +120,10 @@ namespace DeckShuffler
             Console.WriteLine(cardPlayed);
             Console.WriteLine($"The next card on top is: {deck[0]}");
             deck.Remove(cardPlayed);
+            if (deck.Count <= 1)
+            {
+              flag = false;
+            }
           }
 
           else if (input == "quit")
